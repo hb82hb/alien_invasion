@@ -2,6 +2,7 @@ import json
 
 filename = "high_score.json"
 
+
 class GameStats:
     """Track statistics for Alien Invasion"""
 
@@ -10,10 +11,10 @@ class GameStats:
         self.settings = ai_game.settings
         self.reset_stats()
 
-        #Start game in inactive state
+        # Start game in inactive state
         self.game_active = False
 
-        #High score. Should never reset 
+        # High score. Should never reset
         with open(filename) as f:
             self.high_score = json.load(f)
 
